@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script src="index.js"></script>
+        <script src="songs.js"></script>
+        <script src="albums.js"></script>
+        <script src="artist.js"></script>
+        <link rel="stylesheet" href="index.css"> 
+    </head>
+    <body>
+        <div class="grid">
+            <div class="grid-item1">
+                <ul class="horizontal-list" type='none'>
+                    <li  class="appName">Music World</li>
+                    <li onClick=getalbumSongs() id="album">ALBUMS</li>
+                    <li onClick=getartistSongs() id="artist">ARTIST</li>
+                    <li onClick=getplaylistSongs() id="playlist">PLAYLIST</li>
+                  </ul>
+            </div>
+        </div>
+
+    </body>
+</html>

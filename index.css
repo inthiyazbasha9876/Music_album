@@ -1,0 +1,41 @@
+body{
+    margin: 0px !important;
+    background-image: url("./Images/background1.jpg");
+    background-size: cover;
+    backdrop-filter: blur(8px);
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.grid{
+    display: grid;
+    grid-template-areas: 'auto auto auto auto auto auto';
+}
+.grid-item1{
+    min-height: 50px;
+    padding: 10px !important;
+}
+
+.appName{
+    color: white;
+    font-size: 28px !important;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: inline;
+    margin-right: 50px !important;
+}
+
+ul{
+    padding-left: 10px !important;
+}
+.horizontal-list li{
+    color: white;
+    display: inline;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.active{
+    background-color: white;
+    color:black !important;
+    padding: 10px;
+}

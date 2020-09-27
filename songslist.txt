@@ -1,0 +1,235 @@
+ {
+        title: 'Niluvadhamu Ninu',
+        album:'NUVVOSTANANTE NENODDANTANA',
+        artist:'Karthik, Sumangali',
+        song:'',
+        releasedYear: '2005'
+    },
+    {
+        title: 'Something Something',
+        album:'NUVVOSTANANTE NENODDANTANA',
+        artist:'Tippu',
+        song:'',
+        releasedYear: '2005'
+    },
+    {
+        title: 'Ghal Ghal Ghal',
+        album:'NUVVOSTANANTE NENODDANTANA',
+        artist:'S.P. Balu',
+        song:'',
+        releasedYear: '2005'
+    },
+    {
+        title: 'Chandrullo Unde',
+        album:'NUVVOSTANANTE NENODDANTANA',
+        artist:'Shankar Mahadevan',
+        song:'',
+        releasedYear: '2005'
+    }, {
+        title: 'Paripoke Pitta',
+        album:'NUVVOSTANANTE NENODDANTANA',
+        artist:'Mallikarjun, Sagar',
+        song:'',
+        releasedYear: '2005'
+    },
+    {
+        title: 'Adire Adire',
+        album:'NUVVOSTANANTE NENODDANTANA',
+        artist:'Jessie Gift, Kalpana',
+        song:'',
+        releasedYear: '2005'
+    }, {
+        title: 'Padam Kadalanan',
+        album:'NUVVOSTANANTE NENODDANTANA',
+        artist:'Sagar',
+        song:'',
+        releasedYear: '2005'
+    },
+    {
+        title: 'Kalasalalo',
+        album:'Kotta Bangaru Lokam',
+        artist:'Chaitanya, Adithya, Siddharth, Kranthi, Shashi Kiran',
+        song:'',
+        releasedYear: '2008'
+    }, {
+        title: 'Nijanga Nenena',
+        album:'Kotta Bangaru Lokam',
+        artist:'Karthik',
+        song:'',
+        releasedYear: '2008'
+    },
+    {
+        title: 'Nenai Neevani',
+        album:'Kotta Bangaru Lokam',
+        artist:'Shweta Prasad',
+        song:'',
+        releasedYear: '2008'
+    },
+    {
+        title: 'Confusion',
+        album:'Kotta Bangaru Lokam',
+        artist:'Krishna Chaitanya, Mickey.J.Meyer, Chorus',
+        song:'',
+        releasedYear: '2008'
+    },
+    {
+        title: 'Nee Prashnalu',
+        album:'Kotta Bangaru Lokam',
+        artist:'S.P. Balu',
+        song:'',
+        releasedYear: '2008'
+    },
+    {
+        title: 'Ok Anesa',
+        album:'Kotta Bangaru Lokam',
+        artist:'Naresh Iyer, Kalyani',
+        song:'',
+        releasedYear: '2008'
+    },
+    {
+        title: 'Vanochhenante',
+        album:'Tagore',
+        artist:'Udit Narayan, Shreya Ghoshal',
+        song:'',
+        releasedYear: '2003'
+    }, {
+        title: 'Kodithe Kottali',
+        album:'Tagore',
+        artist:'Shankar Mahadevan',
+        song:'',
+        releasedYear: '2003'
+    },
+    {
+        title: 'Gappu Chippu',
+        album:'Tagore',
+        artist:'K. S. Chithra, Mano',
+        song:'',
+        releasedYear: '2003'
+    }, {
+        title: 'Nenusaitham',
+        album:'Tagore',
+        artist:'S.P. Balasubrahmanyam',
+        song:'',
+        releasedYear: '2003'
+    },
+    {
+        title: 'Chinnaga Chinnaga',
+        album:'Tagore',
+        artist:'K. S. Chithra, Hariharan',
+        song:'',
+        releasedYear: '2003'
+    }, {
+        title: 'Manmadha',
+        album:'Tagore',
+        artist:'Mallikarjun, Maha Lakshmi',
+        song:'',
+        releasedYear: '2003'
+    },
+    {
+        title: 'Nammaku Nammaku',
+        album:'Cheppave Chirugaali',
+        artist:'Vandemataram Srinivas',
+        song:'',
+        releasedYear: '2004'
+    },   {
+        title: 'Happy New Year',
+        album:'Cheppave Chirugaali',
+        artist:'Hariharan, Sujatha',
+        song:'',
+        releasedYear: '2004'
+    },
+    {
+        title: 'Paapa Poothota',
+        album:'Cheppave Chirugaali',
+        artist:'Hariharan',
+        song:'',
+        releasedYear: '2004'
+    },
+    {
+        title: 'Nannu Lalinchu Sangeetam',
+        album:'Cheppave Chirugaali',
+        artist:'Udit Narayan, Sujatha',
+        song:'',
+        releasedYear: '2004'
+    },
+    {
+        title: 'Andaala Devatha',
+        album:'Cheppave Chirugaali',
+        artist:'Hariharan',
+        song:'',
+        releasedYear: '2004'
+    }, {
+        title: 'Neeli Neeli Jabili',
+        album:'Cheppave Chirugaali',
+        artist:'Udit Narayan, Shreya Ghoshal',
+        song:'',
+        releasedYear: '2004'
+    },
+    {
+        title: 'Thellarindoi',
+        album:'Shankar Dada M.B.B.S.',
+        artist:'Sumangali, Manikka Vinayagam',
+        song:'',
+        releasedYear: '2004'
+    },
+    {
+        title: 'Sande Poddu',
+        album:'Shankar Dada M.B.B.S.',
+        artist:'hankar Mahadevan, Kalpana',
+        song:'',
+        releasedYear: '2004'
+    }, {
+        title: 'Naa Pere Kanchanamaala',
+        album:'Shankar Dada M.B.B.S.',
+        artist:'Karthik, Malathi Sharma',
+        song:'',
+        releasedYear: '2004'
+    },
+    {
+        title: 'Shankerdada M.B.B.S',
+        album:'Shankar Dada M.B.B.S.',
+        artist:'Mano',
+        song:'',
+        releasedYear: '2004'
+    },   {
+        title: 'Pattu Pattu',
+        album:'Shankar Dada M.B.B.S.',
+        artist:'Sumangali, Manikka Vinayagam',
+        song:'',
+        releasedYear: '2004'
+    },
+    {
+        title: 'Ye Jilla',
+        album:'Shankar Dada M.B.B.S.',
+        artist:'Adnan Sami, Kalpana',
+        song:'',
+        releasedYear: '2004'
+    },
+    {
+        title: 'Butta Bomma',
+        album:'Ala Vaikunthapurramuloo',
+        artist:'Armaan Malik',
+        song:'',
+        releasedYear: '2020'
+    },
+    {
+        title: 'Inkem Inkem Inkem Kaavaale',
+        album:'Geetha Govindam',
+        artist:'Sid Sriram',
+        song:'',
+        releasedYear: '2018'
+    },
+    {
+        title: 'Samajavaragamana',
+        album:'Ala Vaikunthapurramuloo',
+        artist:'Sid Sriram',
+        song:'',
+        releasedYear: '2019'
+    },
+    {
+        title: 'Maate Vinadhuga',
+        album:'Taxiwaala',
+        artist:'Sid Sriram',
+        song:'',
+        releasedYear: '2018'
+    },
