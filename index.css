@@ -30,12 +30,10 @@ body {
 
 .item2>div {
     margin: 10px;
-    height: 250px;
+    height: auto;
     padding: 8px;
     width: 200px;
     border: 1px solid white;
-    box-shadow: 2px -2px 13px white;
-   
 }
 
 .item2>div:hover{
@@ -44,7 +42,14 @@ body {
 
 .item3 {
     grid-area: right;
+    width: 400px !important; 
 }
+
+.details{
+    padding: 10px;
+}
+
+
 
 .appName {
     color: white;
@@ -70,11 +75,11 @@ ul {
     padding: 10px;
 }
 
-.albums{
+.cursor{
     cursor: pointer;
 }
 
-.albums:hover{
+.cursor:hover{
     color:#ff652f
 }
 
@@ -85,19 +90,23 @@ ul {
     margin: auto;
     transition: transform .2s;
 }
+
 .image:hover {
     -ms-transform: scale(1.5); 
     -webkit-transform: scale(1.5); 
     transform: scale(1.5); 
-  }
+}
+ 
+.name{
+    color:#ff652f;
+    font-size: 25px;
+}
 
-  @media  (max-width: 576px) {
-    .item3{
-        width: 100px !important;
-    }
-  }
-  @media  (min-width: 576px) {
-    .item3{
-        width: 600px !important;
-    }
-  }
+.songsDiv{
+    margin: 30px 0px !important;
+}
+
+.songsDiv > p{
+    margin: 0px;
+}
+

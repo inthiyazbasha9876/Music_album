@@ -4,12 +4,15 @@ let songsList = [
         songs: [
             {
                 title: 'Niluvadhamu Ninu',
+                songId:'NVNV01',
                 artistId: 'KRK,SMGL',
             }, {
                 title: 'Ghal Ghal Ghal',
+                songId:'NVNV02',
                 artistId: 'SPB'
             }, {
                 title: 'Chandrullo Unde',
+                songId:'NVNV03',
                 artistId: 'SHMD'
             }
         ]
@@ -19,9 +22,11 @@ let songsList = [
         songs: [
             {
                 title: 'Nijanga Nenena',
+                songId:'KBL01',
                 artistId: 'KRK',
             }, {
                 title: 'Nee Prashnalu',
+                songId:'KBL02',
                 artistId: 'SPB'
             }
         ]
@@ -31,16 +36,20 @@ let songsList = [
         songs: [
             {
                 title: 'Vanochhenante',
+                songId:'TA01',
                 artistId: 'UDNR,SRGS',
             }, {
                 title: 'Nenusaitham',
+                songId:'TA02',
                 artistId: 'SPB'
             }, {
                 title: 'Kodithe Kottali',
+                songId:'TA03',
                 artistId: 'SHMD'
             },
             {
                 title: 'Chinnaga Chinnaga',
+                songId:'TA04',
                 artistId: 'HRH'
             }
         ]
@@ -50,20 +59,25 @@ let songsList = [
         songs: [
             {
                 title: 'Nannu Lalinchu Sangeetam',
+                songId:'CC01',
                 artistId: 'UDNR',
             }, {
                 title: 'Andaala Devatha',
+                songId:'CC02',
                 artistId: 'HRH'
             }, {
                 title: 'Paapa Poothota',
+                songId:'CC03',
                 artistId: 'HRH'
             },
             {
                 title: 'Happy New Year',
+                songId:'CC04',
                 artistId: 'HRH'
             },
             {
                 title: 'Neeli Neeli Jabili',
+                songId:'CC05',
                 artistId: 'UDNR,SRGS'
             }
         ]
@@ -73,18 +87,22 @@ let songsList = [
         songs: [
             {
                 title: 'Thellarindoi',
+                songId:"SDMBBS01",
                 artistId: 'SMGL'
             },
             {
                 title: 'Sande Poddu',
+                songId:"SDMBBS02",
                 artistId: 'SHMD'
             },
             {
                 title: 'Naa Pere Kanchanamaala',
+                songId:"SDMBBS03",
                 artistId: 'KRK'
             },
             {
                 title: 'Pattu Pattu',
+                songId:"SDMBBS04",
                 artistId: 'SMGL'
             },
 
@@ -95,10 +113,12 @@ let songsList = [
         songs: [
             {
                 title: 'Butta Bomma',
+                songId:"AVL01",
                 artistId: 'ARML'
             },
             {
                 title: 'Samajavaragamana',
+                songId:"AVL02",
                 artistId: 'SDSR'
             }
         ]
@@ -108,6 +128,7 @@ let songsList = [
         songs: [
             {
                 title: 'Inkem Inkem Inkem Kaavaale',
+                songId:"GG01",
                 artistId: 'SDSR'
             }
         ]
@@ -117,6 +138,7 @@ let songsList = [
         songs: [
             {
                 title: 'Maate Vinadhuga',
+                songId:"TXWL01",
                 artistId: 'SDSR'
             }
         ]
@@ -126,12 +148,24 @@ let songsList = [
 
 
 function getSongs() {
-    return songsList
+    let resultList=[]
+    songsList.map(s=>{
+        let songs=s.songs
+        for(let i of songs){
+            let song ={
+                title:i.title,
+                songId:i.songId,
+                albumId:s.albumId
+            }
+            resultList.push(song)
+        }
+    })
+    return resultList
 }
 
 function getSongsByAlbum(albumId) {
     let resultList = songsList.filter(a => a.albumId == albumId)
-    return resultList
+    return resultList[0].songs
 }
 
 function getSongsByArtist(artistId) {
