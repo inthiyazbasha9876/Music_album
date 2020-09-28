@@ -26,6 +26,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     overflow-x: auto;
+    max-height: 85vh;
 }
 
 .item2>div {
@@ -43,10 +44,12 @@ body {
 .item3 {
     grid-area: right;
     width: 400px !important; 
+    overflow-y: auto;
 }
 
 .details{
-    padding: 10px;
+    padding: 20px !important;
+    max-height: 100vh;
 }
 
 
@@ -110,3 +113,18 @@ ul {
     margin: 0px;
 }
 
+.audioClass{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: block;
+}
+
+.detailsDis{
+    padding: 20px !important;
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+  }

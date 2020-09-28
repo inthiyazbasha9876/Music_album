@@ -12,6 +12,7 @@ let playlistcount = 0
 
 let removeAlbumId = ''
 
+const songsSrc = './songs/AVL01.mp3'
 getalbumSongs();
 
 function getalbumSongs() {
@@ -59,13 +60,16 @@ function getartistSongs() {
         for (let i of artistList) {
             let div = document.createElement('div')
             div.id = i.artistId
-
+            let img = document.createElement('IMG')
+            img.setAttribute('src', i.image)
+            img.classList.add('image')
             let artistName = document.createElement('p')
             artistName.innerHTML = 'Name : ' + i.artistName;
-            artistName.addEventListener('click',()=>{
+            artistName.addEventListener('click', () => {
                 getdetials(i.artistId);
-            },false)
+            }, false)
             artistName.classList.add('cursor')
+            div.appendChild(img)
             div.appendChild(artistName)
             dataAppend.appendChild(div)
         }
@@ -79,11 +83,12 @@ function getartistSongs() {
 function getplaylistSongs() {
     removeOldData()
     removeOldDetails(removeAlbumId)
-    let allSongs = getSongs()
-    let albumsList = getAlbums();
+    const allSongs = getSongs()
+    const albumsList = getAlbums();
     playlist.classList.add('active')
     album.classList.remove('active')
     artist.classList.remove('active')
+
     if (playlistcount == 0) {
         for (let i of allSongs) {
             let div = document.createElement('div')
@@ -96,7 +101,10 @@ function getplaylistSongs() {
 
             let songTitle = document.createElement('p')
             songTitle.innerHTML = 'Title : ' + i.title;
-
+            songTitle.classList.add('cursor')
+            songTitle.addEventListener('click', () => {
+                getdetials(i)
+            }, false)
             let albumName = document.createElement('p')
             albumName.innerHTML = 'Album : ' + albumdata[0].albumName
 
@@ -112,17 +120,17 @@ function getplaylistSongs() {
 
 
 function getdetials(e) {
-    let albumsList = getAlbums();
-    let artistList =getArtist();
-   
+    const albumsList = getAlbums();
+    const artistList = getArtist();
+
     removeOldDetails(removeAlbumId)
     removeAlbumId = 'removedetails'
     let div = document.createElement('div')
     div.id = removeAlbumId
     if (albumcount > 0) {
-        
+
         let albumResult = getSongsByAlbum(e);
-       
+        console.log(albumResult);
         let albumdata = albumsList.filter(a => e == a.albumId)
 
         let img = document.createElement('IMG')
@@ -137,40 +145,84 @@ function getdetials(e) {
 
         for (let i of albumResult) {
             let song = document.createElement('p')
-            let artistIds=i.artistId.split(',')
-            let artisName=''
-            for(let i of artistIds){
-                let name=artistList.filter(a=>a.artistId == i)
-                artisName += name[0].artistName +', '
+            let artistIds = i.artistId.split(',')
+            let artisName = ''
+            for (let i of artistIds) {
+                let name = artistList.filter(a => a.artistId == i)
+                artisName += name[0].artistName + ' '
             }
-            song.innerHTML=i.title + ' - '+ artisName
+            song.innerHTML = i.title + ' - ' + artisName
+            song.classList.add('cursor')
+            song.addEventListener('click', () => {
+                playSongs(i.song)
+            }, false)
             div.appendChild(song)
+            div.classList.add('detailsDis')
         }
         detailsAppend.appendChild(div)
     }
-    if(artistcount >0){
-        let artistResult = getSongsByArtist(e);
+    if (artistcount > 0) {
+        const artistResult = getSongsByArtist(e);
         console.log(artistResult);
-        for(let i of artistResult){
-            let songsDiv=document.createElement('div')
+        for (let i of artistResult) {
+            let songsDiv = document.createElement('div')
             songsDiv.classList.add('songsDiv')
-            let songName=document.createElement('p')
-            songName.innerHTML=i.title.title
-            songName.classList.add('name')
+            let songName = document.createElement('p')
+            songName.innerHTML = i.title.title
+            songName.classList.add('name', 'cursor')
+            songName.addEventListener('click', () => {
+                playSongs(i.title.song)
+            }, false)
 
-            let movieName=document.createElement('p')
-            let name=albumList.filter(a=>i.albumId==a.albumId)
-            movieName.innerHTML=name[0].albumName
+            let movieName = document.createElement('p')
+            let name = albumList.filter(a => i.albumId == a.albumId)
+            movieName.innerHTML = 'Movie : ' + name[0].albumName
 
             songsDiv.appendChild(songName)
             songsDiv.appendChild(movieName)
             div.appendChild(songsDiv)
+            div.classList.add('detailsDis')
         }
         detailsAppend.appendChild(div)
     }
+
+    if (playlistcount > 0) {
+        console.log(e);
+        let img = document.createElement('IMG')
+        let albumImage = albumsList.filter(a => a.albumId == e.albumId)
+        console.log(albumImage);
+        img.setAttribute('src', albumImage[0].image)
+        img.classList.add('image')
+
+        let titleName = document.createElement('p')
+        titleName.innerHTML = 'Title : '+e.title
+
+        let album = document.createElement('p')
+        album.innerHTML = 'Movie : ' + albumImage[0].albumName + ' - ' + albumImage[0].albumReleased
+
+        let artist = document.createElement('p')
+        let artistarray = e.artistId.split(',')
+        artist.innerHTML = 'Artist : '
+        for (let i of artistarray) {
+            let name = artistList.filter(a => a.artistId == i)
+            artist.innerHTML += name[0].artistName + ' '
+        }
+        div.appendChild(img)
+        div.appendChild(titleName)
+        div.appendChild(album)
+        div.appendChild(artist)
+        div.classList.add('detailsDis')
+        detailsAppend.appendChild(div)
+        playSongs(e.song)
+    }
 }
 
-
+function playSongs(e) {
+    console.log(e);
+    let data = document.getElementById('songPlay')
+    data.src = e
+    data.autoplay = true
+}
 function removeOldData() {
     let albumsList = getAlbums();
     let artistList = getArtist();
@@ -207,6 +259,6 @@ function removeOldDetails(e) {
         let removedata = document.getElementById(e)
         console.log(removedata);
         removedata.remove()
-        removeAlbumId=''
+        removeAlbumId = ''
     }
 }

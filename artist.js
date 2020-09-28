@@ -1,43 +1,48 @@
 var artistList = [
     {
         artistName:'Sid Sriram',
-        artistId:"SDSR"
+        artistId:"SDSR",
+        image:'./images/sdsr.jpg'
     },
     {
         artistName:'Armaan Malik',
-        artistId:"ARML"
+        artistId:"ARML",
+        image:'./images/arml.jpg'
     },
     {
         artistName:'Karthik',
-        artistId:"KRK"
+        artistId:"KRK",
+        image:'./images/krk.jpg'
     },
     {
         artistName:'Shankar Mahadevan',
-        artistId:'SHMD'
-    },
-    {
-        artistName:'Kalpana',
-        artistId:'KPN'
+        artistId:'SHMD',
+        image:'./images/smdn.jpg'
     },
     {
         artistName:'Sumangali',
-        artistId:'SMGL'
+        artistId:'SMGL',
+        image:'./images/smgl.jpg'
     },
     {
         artistName:'Udit Narayan',
-        artistId:'UDNR'
+        artistId:'UDNR',
+        image:'./images/udnr.jpg'
     },
     {
         artistName:'Hariharan',
-        artistId:"HRH"
+        artistId:"HRH",
+        image:'./images/hrhn.jpg'
     },
     {
         artistName:'S.P. Balasubrahmanyam',
-        artistId:'SPB'
+        artistId:'SPB',
+        image:'./images/spb.jpg'
     },
     {
         artistName:'Shreya Ghoshal',
-        artistId:'SRGS'
+        artistId:'SRGS',
+        image:'./images/srgs.jpg'
     }
 
 ]

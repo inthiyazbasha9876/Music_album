@@ -6,14 +6,17 @@ let songsList = [
                 title: 'Niluvadhamu Ninu',
                 songId:'NVNV01',
                 artistId: 'KRK,SMGL',
+                song:'./songs/NVNV01.mp3'
             }, {
                 title: 'Ghal Ghal Ghal',
                 songId:'NVNV02',
-                artistId: 'SPB'
+                artistId: 'SPB',
+                song:'./songs/NVNV02.mp3'
             }, {
                 title: 'Chandrullo Unde',
                 songId:'NVNV03',
-                artistId: 'SHMD'
+                artistId: 'SHMD',
+                song:'./songs/NVNV03.mp3'
             }
         ]
     },
@@ -24,10 +27,12 @@ let songsList = [
                 title: 'Nijanga Nenena',
                 songId:'KBL01',
                 artistId: 'KRK',
+                song:'./songs/KBL01.mp3'
             }, {
                 title: 'Nee Prashnalu',
                 songId:'KBL02',
-                artistId: 'SPB'
+                artistId: 'SPB',
+                song:'./songs/KBL02.mp3'
             }
         ]
     },
@@ -38,19 +43,23 @@ let songsList = [
                 title: 'Vanochhenante',
                 songId:'TA01',
                 artistId: 'UDNR,SRGS',
+                song:'./songs/TA01.mp3'
             }, {
                 title: 'Nenusaitham',
                 songId:'TA02',
-                artistId: 'SPB'
+                artistId: 'SPB',
+                song:'./songs/TA02.mp3'
             }, {
                 title: 'Kodithe Kottali',
                 songId:'TA03',
-                artistId: 'SHMD'
+                artistId: 'SHMD',
+                song:'./songs/TA03.mp3'
             },
             {
                 title: 'Chinnaga Chinnaga',
                 songId:'TA04',
-                artistId: 'HRH'
+                artistId: 'HRH',
+                song:'./songs/TA04.mp3'
             }
         ]
     },
@@ -61,24 +70,29 @@ let songsList = [
                 title: 'Nannu Lalinchu Sangeetam',
                 songId:'CC01',
                 artistId: 'UDNR',
+                song:'./songs/CC01.mp3'
             }, {
                 title: 'Andaala Devatha',
                 songId:'CC02',
-                artistId: 'HRH'
+                artistId: 'HRH',
+                song:'./songs/CC02.mp3'
             }, {
                 title: 'Paapa Poothota',
                 songId:'CC03',
-                artistId: 'HRH'
+                artistId: 'HRH',
+                song:'./songs/CC03.mp3'
             },
             {
                 title: 'Happy New Year',
                 songId:'CC04',
-                artistId: 'HRH'
+                artistId: 'HRH',
+                song:'./songs/CC04.mp3'
             },
             {
                 title: 'Neeli Neeli Jabili',
                 songId:'CC05',
-                artistId: 'UDNR,SRGS'
+                artistId: 'UDNR,SRGS',
+                song:'./songs/CC05.mp3'
             }
         ]
     },
@@ -88,22 +102,26 @@ let songsList = [
             {
                 title: 'Thellarindoi',
                 songId:"SDMBBS01",
-                artistId: 'SMGL'
+                artistId: 'SMGL',
+                song:'./songs/SDMBBS01.mp3'
             },
             {
                 title: 'Sande Poddu',
                 songId:"SDMBBS02",
-                artistId: 'SHMD'
+                artistId: 'SHMD',
+                song:'./songs/SDMBBS02.mp3'
             },
             {
                 title: 'Naa Pere Kanchanamaala',
                 songId:"SDMBBS03",
-                artistId: 'KRK'
+                artistId: 'KRK',
+                song:'./songs/SDMBBS03.mp3'
             },
             {
                 title: 'Pattu Pattu',
                 songId:"SDMBBS04",
-                artistId: 'SMGL'
+                artistId: 'SMGL',
+                song:'./songs/SDMBBS04.mp3'
             },
 
         ]
@@ -114,12 +132,14 @@ let songsList = [
             {
                 title: 'Butta Bomma',
                 songId:"AVL01",
-                artistId: 'ARML'
+                artistId: 'ARML',
+                song:'./songs/AVL01.mp3'
             },
             {
                 title: 'Samajavaragamana',
                 songId:"AVL02",
-                artistId: 'SDSR'
+                artistId: 'SDSR',
+                song:'./songs/AVL02.mp3'
             }
         ]
     },
@@ -129,7 +149,8 @@ let songsList = [
             {
                 title: 'Inkem Inkem Inkem Kaavaale',
                 songId:"GG01",
-                artistId: 'SDSR'
+                artistId: 'SDSR',
+                song:'./songs/GG01.mp3'
             }
         ]
     },
@@ -139,7 +160,8 @@ let songsList = [
             {
                 title: 'Maate Vinadhuga',
                 songId:"TXWL01",
-                artistId: 'SDSR'
+                artistId: 'SDSR',
+                song:'./songs/TXWL01.mp3'
             }
         ]
     }
@@ -155,7 +177,9 @@ function getSongs() {
             let song ={
                 title:i.title,
                 songId:i.songId,
-                albumId:s.albumId
+                artistId:i.artistId,
+                albumId:s.albumId,
+                song:i.song
             }
             resultList.push(song)
         }
