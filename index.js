@@ -1,10 +1,10 @@
-let album = document.getElementById('album');
+const album = document.getElementById('album');
 
 
-let artist = document.getElementById('artist')
-let playlist = document.getElementById('playlist')
-let dataAppend = document.getElementById('data')
-let detailsAppend = document.getElementById('details')
+const artist = document.getElementById('artist')
+const playlist = document.getElementById('playlist')
+const dataAppend = document.getElementById('data')
+const detailsAppend = document.getElementById('details')
 
 let albumcount = 0
 let artistcount = 0
@@ -18,16 +18,19 @@ getalbumSongs();
 function getalbumSongs() {
     removeOldData()
     removeOldDetails(removeAlbumId)
-    let albumsList = getAlbums();
+    const albumsList = albums.getalbum();
     album.classList.add('active')
     playlist.classList.remove('active')
     artist.classList.remove('active');
+
     if (albumcount == 0) {
         for (let i of albumsList) {
             let div = document.createElement('div')
             div.id = i.albumId
             let movieName = document.createElement('p')
             let year = document.createElement('p')
+            let cast = document.createElement('p')
+            let music = document.createElement('p')
             let image = document.createElement('img')
 
             image.setAttribute("src", i.image);
@@ -38,10 +41,14 @@ function getalbumSongs() {
             }, false)
             year.innerHTML = 'Year : ' + i.albumReleased;
             movieName.classList.add('cursor')
+            cast.innerHTML = 'Cast : ' + i.cast
+            music.innerHTML = 'Music : ' + i.music
 
             div.appendChild(image)
             div.appendChild(movieName)
             div.appendChild(year)
+            div.appendChild(cast)
+            div.appendChild(music)
             dataAppend.appendChild(div)
         }
         albumcount++
@@ -51,7 +58,7 @@ function getalbumSongs() {
 function getartistSongs() {
     removeOldData()
     removeOldDetails(removeAlbumId)
-    let artistList = getArtist();
+    const artistList = getArtist();
     artist.classList.add('active')
     album.classList.remove('active')
     playlist.classList.remove('active')
@@ -84,7 +91,7 @@ function getplaylistSongs() {
     removeOldData()
     removeOldDetails(removeAlbumId)
     const allSongs = getSongs()
-    const albumsList = getAlbums();
+    const albumsList = albums.getalbum();
     playlist.classList.add('active')
     album.classList.remove('active')
     artist.classList.remove('active')
@@ -120,7 +127,7 @@ function getplaylistSongs() {
 
 
 function getdetials(e) {
-    const albumsList = getAlbums();
+    const albumsList = albums.getalbum();
     const artistList = getArtist();
 
     removeOldDetails(removeAlbumId)
@@ -139,9 +146,22 @@ function getdetials(e) {
         div.appendChild(img)
 
         let movieName = document.createElement('p')
-        movieName.innerHTML = albumdata[0].albumName
+        let year = document.createElement('p')
+        let cast = document.createElement('p')
+        let music = document.createElement('p')
+        let songs = document.createElement('p')
+        movieName.innerHTML = 'Movie : ' + albumdata[0].albumName
         movieName.classList.add('name')
+        year.innerHTML = 'Year : ' + albumdata[0].albumReleased
+        cast.innerHTML = 'Cast : ' + albumdata[0].cast
+        music.innerHTML = 'Music : ' + albumdata[0].music
+        songs.innerHTML = 'Songs'
+        songs.classList.add('name')
         div.appendChild(movieName)
+        div.appendChild(year)
+        div.appendChild(cast)
+        div.appendChild(music)
+        div.appendChild(songs)
 
         for (let i of albumResult) {
             let song = document.createElement('p')
@@ -175,11 +195,21 @@ function getdetials(e) {
             }, false)
 
             let movieName = document.createElement('p')
-            let name = albumList.filter(a => i.albumId == a.albumId)
+            let name = albumsList.filter(a => i.albumId == a.albumId)
             movieName.innerHTML = 'Movie : ' + name[0].albumName
 
+            let year = document.createElement('p')
+            year.innerHTML='Year : '+name[0].albumReleased
+            let cast = document.createElement('p')
+            cast.innerHTML='Cast : '+name[0].cast
+            let music = document.createElement('p')
+            music.innerHTML='Music : '+name[0].music
+            
             songsDiv.appendChild(songName)
             songsDiv.appendChild(movieName)
+            songsDiv.appendChild(year)
+            songsDiv.appendChild(cast)
+            songsDiv.appendChild(music) 
             div.appendChild(songsDiv)
             div.classList.add('detailsDis')
         }
@@ -195,10 +225,16 @@ function getdetials(e) {
         img.classList.add('image')
 
         let titleName = document.createElement('p')
-        titleName.innerHTML = 'Title : '+e.title
+        titleName.innerHTML = 'Title : ' + e.title
 
         let album = document.createElement('p')
-        album.innerHTML = 'Movie : ' + albumImage[0].albumName + ' - ' + albumImage[0].albumReleased
+        let year = document.createElement('p')
+        let cast = document.createElement('p')
+        let music = document.createElement('p')
+        album.innerHTML = 'Movie : ' + albumImage[0].albumName 
+        year.innerHTML = 'Year : ' + albumImage[0].albumReleased 
+        cast.innerHTML = 'Cast : ' + albumImage[0].cast 
+        music.innerHTML = 'Music : ' + albumImage[0].music 
 
         let artist = document.createElement('p')
         let artistarray = e.artistId.split(',')
@@ -210,6 +246,9 @@ function getdetials(e) {
         div.appendChild(img)
         div.appendChild(titleName)
         div.appendChild(album)
+        div.appendChild(year)
+        div.appendChild(cast)
+        div.appendChild(music)
         div.appendChild(artist)
         div.classList.add('detailsDis')
         detailsAppend.appendChild(div)
@@ -223,8 +262,10 @@ function playSongs(e) {
     data.src = e
     data.autoplay = true
 }
+
+
 function removeOldData() {
-    let albumsList = getAlbums();
+    let albumsList = albums.getalbum();
     let artistList = getArtist();
     let playlist = getSongs()
     if (albumcount > 0) {
